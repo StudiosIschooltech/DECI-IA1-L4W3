@@ -14,7 +14,7 @@ class Library {
     const index = this.books.findIndex(book => book.title === title); // Find the book by title
     if (index !== -1) {
       const removedBook = this.books.splice(index, 1)[0]; // Remove the book from the array
-      console.log(`Removed: ${removedBook.getDetails()}`);
+      console.log(`Removed: ${console.log(removedBook.getDetails())}`);
     } else {
       console.log(`Can't find a book with the title: ${title} to remove`);
     }
@@ -23,7 +23,7 @@ class Library {
   searchBook(title) {
     const book = this.books.find(book => book.title === title); // Search for a book by title
     if (book) {
-      console.log(`Found: ${book.getDetails()}`); // If found, show details
+      console.log(`Found: ${console.log(book.getDetails())}`); // If found, show details
     } else {
       console.log(`No book found with the title: ${title}`);
     }
@@ -33,7 +33,7 @@ class Library {
     if (this.books.length === 0) {
       console.log('No books in the library.'); // Inform if no books are present
     } else {
-      this.books.forEach(book => book.getDetails()); // List all books
+      this.books.forEach(book => console.log(book.getDetails())); // List all books
     }
   }
 }
